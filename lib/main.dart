@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import './questao.dart';
+import './resposta.dart';
 
 main() => runApp(PerguntaApp());
 
@@ -22,6 +23,12 @@ class _PerguntaAppState extends State<PerguntaApp>{
       'Qual é a sua cor favorita?',
       'Qual é o seu animal favorito?',
 
+    ];
+
+    final List<String> respostas = [
+      'Resposta 1',
+      'Resposta 2',
+      'Resposta 3'
     ]; 
 
     return MaterialApp(
@@ -37,20 +44,11 @@ class _PerguntaAppState extends State<PerguntaApp>{
 
             Questao(perguntas[_perguntaSelecionada]),
 
-            ElevatedButton(
-              onPressed:_responder,
-              child: Text('Resposta 1')
-            ),
+            Resposta(respostas[0]),
 
-            ElevatedButton(
-              onPressed: _responder,
-              child: Text('Resposta 2')
-            ),
+            Resposta(respostas[1]),
 
-            ElevatedButton(
-              onPressed: _responder,
-              child: Text('Resposta 3')
-            )
+            Resposta(respostas[2])
 
           ],
 
