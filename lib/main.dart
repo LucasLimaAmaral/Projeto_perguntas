@@ -53,6 +53,15 @@ class _PerguntaAppState extends State<PerguntaApp>{
         
         appBar: AppBar(
           title: Text('Perguntas'),
+          centerTitle: true,
+          backgroundColor: Colors.blue,
+
+          titleTextStyle: TextStyle(
+            fontSize: 24.0,
+            fontWeight: FontWeight.bold,
+            color: Colors.white
+          ),
+          
         ),
 
         body: temPerguntaSelecionada ? Column(
